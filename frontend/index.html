@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <title>Forum Meme</title>
+</head>
+
+<body class="font-inter text-gray-800 bg-white">
+
+    <!-- start: Navbar -->
+    <nav class="py-1.5 bg-white shadow-md shadow-black/5 h-14 flex items-center sticky top-0 left-0 z-30">
+        <div class="container max-w-7xl mx-auto px-4 flex items-center">
+            <button type="button" class="sidebar-toggle mr-4 lg:hidden"><i class="ri-menu-2-line"></i></button>
+            <a href="#" class="flex items-center">
+                <span class="font-bold text-lg text-blue-500  sm:block">Gacor<span class="text-yellow-500">Meme</span>
+            </a>
+            <div class="ml-auto flex items-center">
+                <form action="" class="relative mr-4 hidden sm:block w-72">
+                    <input type="text"
+                        class="py-2.5 px-4 pl-10 text-sm rounded-md focus:outline-blue-500 bg-gray-100 w-full"
+                        placeholder="Search...">
+                    <i
+                        class="ri-search-line absolute top-1/2 -translate-y-1/2 left-4 text-gray-400 pointer-events-none"></i>
+                </form>
+                <ul class="flex items-center">
+                    <li class="mr-2 sm:hidden">
+                        <div class="dropdown group">
+                            <button type="button"
+                                class="dropdown-toggle w-8 h-8 rounded-md flex items-center justify-center hover:bg-gray-100 text-gray-400 group-[.active]:text-gray-500 group-[.active]:bg-gray-100">
+                                <i class="ri-search-line"></i>
+                            </button>
+                            <div
+                                class="dropdown-menu z-20 py-2 rounded-md shadow-md shadow-black/5 border border-gray-100 w-[calc(100%-32px)] sm:w-72 hidden group-[.active]:block bg-white">
+                                <form action="" class="relative mb-2 mx-4">
+                                    <input type="text"
+                                        class="py-2.5 px-4 pl-10 text-sm rounded-md focus:outline-blue-500 bg-gray-100 w-full"
+                                        placeholder="Search...">
+                                    <i
+                                        class="ri-search-line absolute top-1/2 -translate-y-1/2 left-4 text-gray-400 pointer-events-none"></i>
+                                </form>
+                                <ul class="max-h-64 overflow-y-auto">
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mr-3">
+                        <div class="dropdown group">
+                            <button type="button"
+                                class="dropdown-toggle w-8 h-8 rounded-md flex items-center justify-center hover:bg-gray-100 text-gray-400 group-[.active]:text-gray-500 group-[.active]:bg-gray-100">
+                                <i class="ri-notification-3-line"></i>
+                            </button>
+                            <ul
+                                class="dropdown-menu z-20 py-2 rounded-md shadow-md shadow-black/5 border border-gray-100 w-72 max-h-64 overflow-y-auto hidden group-[.active]:block bg-white">
+                                <li>
+                                    <a href="#" class="py-2 px-4 text-sm flex items-center hover:bg-gray-100">
+                                        <img src="https://placehold.co/32x32" alt=""
+                                            class="w-8 h-8 object-cover rounded-md mr-3">
+                                        <div>
+                                            <div class="text-sm font-semibold">NSFW</div>
+                                            <p class="text-[12px] text-gray-400">Lorem ipsum dolor sit amet.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="py-2 px-4 text-sm flex items-center hover:bg-gray-100">
+                                        <img src="https://placehold.co/32x32" alt=""
+                                            class="w-8 h-8 object-cover rounded-md mr-3">
+                                        <div>
+                                            <div class="text-sm font-semibold">Meme Brutal</div>
+                                            <p class="text-[12px] text-gray-400">Lorem ipsum dolor sit amet.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown group">
+                            <button type="button" class="dropdown-toggle flex items-center">
+                                <img src="image/my-profil.png" alt=""
+                                    class="w-9 h-9 object-cover rounded-md block">
+                            </button>
+                            <ul
+                                class="dropdown-menu z-20 py-2 rounded-md shadow-md shadow-black/5 border border-gray-100 min-w-[140px] hidden group-[.active]:block bg-white">
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-600 py-1.5 px-4">
+                                        <i class="ri-user-4-line text-base mr-3"></i>
+                                        <span>Profile</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-600 py-1.5 px-4">
+                                        <i class="ri-settings-line text-base mr-3"></i>
+                                        <span>Setting</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end: Navbar -->
+
+    <!-- start: Main -->
+    <main>
+        <div class="container mx-auto px-4 max-w-7xl flex items-start flex-shrink">
+            <!-- start: Sidebar -->
+            <div
+                class="sidebar fixed lg:sticky top-0 lg:top-14 left-0 bg-white lg:bg-transparent z-40 w-64 flex-shrink-0 mr-4 h-full lg:h-[calc(100vh-56px)] overflow-y-auto py-4 px-4 lg:px-0">
+                <div class="mb-4">
+                    <ul>
+                        <li class="group active">
+                            <a href="#"
+                                class="flex items-center py-2 px-4 text-sm rounded-md text-gray-500 hover:text-gray-600 group-[.active]:bg-gray-200 group-[.active]:text-gray-800 font-medium">
+                                <i class="ri-home-2-line text-lg mr-3"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="flex items-center py-2 px-4 text-sm rounded-md text-gray-500 hover:text-gray-600 group-[.active]:bg-gray-200 group-[.active]:text-gray-800 font-medium">
+                                <i class="ri-chat-3-line text-lg mr-3"></i>
+                                <span>Messages</span>
+                                <span
+                                    class="ml-auto w-5 h-5 rounded bg-rose-500 text-white font-bold text-[10px] flex items-center justify-center">3</span>
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="flex items-center py-2 px-4 text-sm rounded-md text-gray-500 hover:text-gray-600 group-[.active]:bg-gray-200 group-[.active]:text-gray-800 font-medium">
+                                <i class="ri-user-follow-line text-lg mr-3"></i>
+                                <span>Friends</span>
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="flex items-center py-2 px-4 text-sm rounded-md text-gray-500 hover:text-gray-600 group-[.active]:bg-gray-200 group-[.active]:text-gray-800 font-medium">
+                                <i class="ri-image-line text-lg mr-3"></i>
+                                <span>Photos</span>
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="flex items-center py-2 px-4 text-sm rounded-md text-gray-500 hover:text-gray-600 group-[.active]:bg-gray-200 group-[.active]:text-gray-800 font-medium">
+                                <i class="ri-video-line text-lg mr-3"></i>
+                                <span>Videos</span>
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="flex items-center py-2 px-4 text-sm rounded-md text-gray-500 hover:text-gray-600 group-[.active]:bg-gray-200 group-[.active]:text-gray-800 font-medium">
+                                <i class="ri-user-4-line text-lg mr-3"></i>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="flex items-center py-2 px-4 text-sm rounded-md text-gray-500 hover:text-gray-600 group-[.active]:bg-gray-200 group-[.active]:text-gray-800 font-medium">
+                                <i class="ri-settings-line text-lg mr-3"></i>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="text-[12px] uppercase font-semibold text-gray-400 tracking-wide mb-2">Favourites</div>
+                    <ul>
+                        <li class="group">
+                            <a href="#"
+                                class="flex items-center py-2 px-4 text-sm rounded-md text-gray-500 hover:text-gray-600 group-[.active]:bg-gray-200 group-[.active]:text-gray-800 font-medium">
+                                <i class="ri-home-2-line text-lg mr-3"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="flex items-center py-2 px-4 text-sm rounded-md text-gray-500 hover:text-gray-600 group-[.active]:bg-gray-200 group-[.active]:text-gray-800 font-medium">
+                                <i class="ri-chat-3-line text-lg mr-3"></i>
+                                <span>Messages</span>
+                                <span
+                                    class="ml-auto w-5 h-5 rounded bg-rose-500 text-white font-bold text-[10px] flex items-center justify-center">3</span>
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="flex items-center py-2 px-4 text-sm rounded-md text-gray-500 hover:text-gray-600 group-[.active]:bg-gray-200 group-[.active]:text-gray-800 font-medium">
+                                <i class="ri-user-follow-line text-lg mr-3"></i>
+                                <span>Friends</span>
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="flex items-center py-2 px-4 text-sm rounded-md text-gray-500 hover:text-gray-600 group-[.active]:bg-gray-200 group-[.active]:text-gray-800 font-medium">
+                                <i class="ri-image-line text-lg mr-3"></i>
+                                <span>Photos</span>
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="flex items-center py-2 px-4 text-sm rounded-md text-gray-500 hover:text-gray-600 group-[.active]:bg-gray-200 group-[.active]:text-gray-800 font-medium">
+                                <i class="ri-video-line text-lg mr-3"></i>
+                                <span>Videos</span>
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="flex items-center py-2 px-4 text-sm rounded-md text-gray-500 hover:text-gray-600 group-[.active]:bg-gray-200 group-[.active]:text-gray-800 font-medium">
+                                <i class="ri-user-4-line text-lg mr-3"></i>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#"
+                                class="flex items-center py-2 px-4 text-sm rounded-md text-gray-500 hover:text-gray-600 group-[.active]:bg-gray-200 group-[.active]:text-gray-800 font-medium">
+                                <i class="ri-settings-line text-lg mr-3"></i>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sidebar-overlay fixed top-0 left-0 w-full h-full bg-black/50 z-30"></div>
+            <!-- menu bawah sm hidden-->     
+  <nav class="fixed bottom-0 left-0 right-0 bg-white shadow-lg sm:hidden">
+    <ul class="flex justify-around items-center py-3">
+      <!-- Home -->
+      <li class="text-center">
+        <a href="#" class="text-gray-600 hover:text-gray-900">
+          <!-- Home Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l9-9 9 9-3 0v9H6v-9l-3 0z" />
+          </svg>
+          <span class="block text-sm">Home</span>
+        </a>
+      </li>
+      <!-- Komunitas -->
+      <li class="text-center">
+        <a href="#" class="text-gray-600 hover:text-gray-900">
+          <!-- Komunitas Icon (People) -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a4 4 0 00-4-4h-1a4 4 0 00-4 4v2h4zm-6-2v-4a4 4 0 00-4-4H6a4 4 0 00-4 4v4h4v-4a4 4 0 014-4h1a4 4 0 014 4v4h4z" />
+          </svg>
+          <span class="block text-sm">Topik</span>
+        </a>
+      </li>
+      <!-- Tambah/Post -->
+      <li class="text-center">
+        <a href="#" class="text-gray-600 hover:text-gray-900">
+          <!-- Add/Post Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+          </svg>
+          <span class="block text-sm">Tambah</span>
+        </a>
+      </li>
+      <!-- Notifikasi -->
+      <li class="text-center">
+        <a href="#" class="text-gray-600 hover:text-gray-900">
+          <!-- Notifikasi Icon (Bell) -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405C18.075 14.496 18 13.772 18 13V8a6 6 0 00-6-6 6 6 0 00-6 6v5c0 .772-.075 1.496-.595 2.595L3 17h5m12 0a2 2 0 11-4 0h4z" />
+          </svg>
+          <span class="block text-sm">Notifikasi</span>
+        </a>
+      </li>
+      <!-- Profil User -->
+      <li class="text-center">
+        <a href="#" class="text-gray-600 hover:text-gray-900">
+          <!-- Profil User Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14a4 4 0 100-8 4 4 0 000 8zm0 2a6 6 0 00-6 6v1h12v-1a6 6 0 00-6-6z" />
+          </svg>
+          <span class="block text-sm">Profil</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+            <!-- end: Sidebar -->
+            <!-- start: Content -->
+            <div class="flex-shrink py-4 min-w-0 w-full">
+                <div class="w-full min-w-0 md:w-[780px]">
+                    <div class="swiper mb-4">
+                        <div class="swiper-wrapper">
+                            <a href="#"
+                                class="swiper-slide w-24 h-36 rounded-md bg-white flex flex-col items-center justify-center">
+                                <i class="ri-add-circle-fill text-blue-500 text-lg"></i>
+                                <span class="text-[13px] font-semibold">Add Komunitas</span>
+                            </a>
+                            <a href="#"
+                                class="swiper-slide relative w-24 h-36 rounded-md overflow-hidden before:contents-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-16 before:bg-gradient-to-b before:from-transparent before:to-black/50 z-10">
+                                <img src="image/com-nsfw.png" alt="" class="w-full h-full object-cover block">
+                                <span
+                                    class="absolute bottom-3 left-0 w-full block text-center font-semibold text-white z-20 text-[13px]">NSFW</span>
+                            </a>
+                            <a href="#"
+                                class="swiper-slide relative w-24 h-36 rounded-md overflow-hidden before:contents-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-16 before:bg-gradient-to-b before:from-transparent before:to-black/50 z-10">
+                                <img src="image/darg-meme.png" alt="" class="w-full h-full object-cover block">
+                                <span
+                                    class="absolute bottom-3 left-0 w-full block text-center font-semibold text-white z-20 text-[13px]">Dark Meme</span>
+                            </a>
+                            <a href="#"
+                                class="swiper-slide relative w-24 h-36 rounded-md overflow-hidden before:contents-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-16 before:bg-gradient-to-b before:from-transparent before:to-black/50 z-10">
+                                <img src="image/com-meme-halal.png" alt="" class="w-full h-full object-cover block">
+                                <span
+                                    class="absolute bottom-3 left-0 w-full block text-center font-semibold text-white z-20 text-[13px]">Meme Halal</span>
+                            </a>
+                            <a href="#"
+                                class="swiper-slide relative w-24 h-36 rounded-md overflow-hidden before:contents-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-16 before:bg-gradient-to-b before:from-transparent before:to-black/50 z-10">
+                                <img src="image/pecinta-loli.png" alt="" class="w-full h-full object-cover block">
+                                <span
+                                    class="absolute bottom-3 left-0 w-full block text-center font-semibold text-white z-20 text-[13px]">Pecinta Loli</span>
+                            </a>
+                            <a href="#"
+                                class="swiper-slide relative w-24 h-36 rounded-md overflow-hidden before:contents-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-16 before:bg-gradient-to-b before:from-transparent before:to-black/50 z-10">
+                                <img src="image/blue-archive.png" alt="" class="w-full h-full object-cover block">
+                                <span
+                                    class="absolute bottom-3 left-0 w-full block text-center font-semibold text-white z-20 text-[13px]">Fandom Blue Archive</span>
+                            </a>
+                            <a href="#"
+                                class="swiper-slide relative w-24 h-36 rounded-md overflow-hidden before:contents-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-16 before:bg-gradient-to-b before:from-transparent before:to-black/50 z-10">
+                                <img src="image/kmb.png" alt="" class="w-full h-full object-cover block">
+                                <span
+                                    class="absolute bottom-3 left-0 w-full block text-center font-semibold text-white z-20 text-[13px]">Komunitas Meme Bebas</span>
+                            </a>
+                            <a href="#"
+                                class="swiper-slide relative w-24 h-36 rounded-md overflow-hidden before:contents-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-16 before:bg-gradient-to-b before:from-transparent before:to-black/50 z-10">
+                                <img src="image/anime-forum.png" alt="" class="w-full h-full object-cover block">
+                                <span
+                                    class="absolute bottom-3 left-0 w-full block text-center font-semibold text-white z-20 text-[13px]">Forum Anime</span>
+                            </a>
+                            <a href="#"
+                                class="swiper-slide relative w-24 h-36 rounded-md overflow-hidden before:contents-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-16 before:bg-gradient-to-b before:from-transparent before:to-black/50 z-10">
+                                <img src="image/meme-absurd.png" alt="" class="w-full h-full object-cover block">
+                                <span
+                                    class="absolute bottom-3 left-0 w-full block text-center font-semibold text-white z-20 text-[13px]">Meme Absurd</span>
+                            </a>
+                            <a href="#"
+                                class="swiper-slide relative w-24 h-36 rounded-md overflow-hidden before:contents-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-16 before:bg-gradient-to-b before:from-transparent before:to-black/50 z-10">
+                                <img src="image/brutal-meme.png" alt="" class="w-full h-full object-cover block">
+                                <span
+                                    class="absolute bottom-3 left-0 w-full block text-center font-semibold text-white z-20 text-[13px]">Brutal Meme</span>
+                            </a>
+                            <a href="#"
+                                class="swiper-slide relative w-24 h-36 rounded-md overflow-hidden before:contents-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-16 before:bg-gradient-to-b before:from-transparent before:to-black/50 z-10">
+                                <img src="image/teknologi-meme.png" alt="" class="w-full h-full object-cover block">
+                                <span
+                                    class="absolute bottom-3 left-0 w-full block text-center font-semibold text-white z-20 text-[13px]">SiPALING</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-md shadow-md shadow-black/5 flex items-center bg-white mb-4">
+                        <img src="image/my-profil.png" alt="" class="w-9 h-9 object-cover rounded-md mr-3">
+                        <form action="" class="flex items-center w-full">
+                            <input type="text" placeholder="Post Meme Kamu Sekarang..." class="outline-none text-sm w-full">
+                            <button type="submit"
+                                class="ml-3 py-1.5 px-3 rounded-md bg-blue-500 text-white font-semibold text-[12px] hover:bg-blue-600">Post</button>
+                        </form>
+                    </div>
+                    <div class="p-4 rounded-md shadow-md shadow-black/5 bg-white mb-4">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center mr-4">
+                                <img src="image/profil-user2.png" alt=""
+                                    class="w-9 h-9 object-cover rounded-md mr-3">
+                                <div>
+                                    <a href="#" class="font-semibold text-sm">ach_rdhn</a>
+                                    <div class="text-gray-400 text-[12px]">1 hours ago</div>
+                                </div>
+                            </div>
+                            <div class="dropdown group">
+                                <button type="button"
+                                    class="dropdown-toggle flex items-center justify-center w-5 h-5 text-sm rounded bg-gray-100 text-gray-400 group-[.active]:text-gray-500">
+                                    <i class="ri-more-fill"></i>
+                                </button>
+                                <ul
+                                    class="dropdown-menu z-20 py-2 rounded-md shadow-md shadow-black/5 border border-gray-100 min-w-[140px] hidden group-[.active]:block bg-white">
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-600 py-1.5 px-4">
+                                            <i class="fa-regular fa-floppy-disk mr-3"></i>
+                                            <span>Simpan</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-600 py-1.5 px-4">
+                                            <i class="fa-solid fa-download mr-3"></i>
+                                            <span>Dowload</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-600 py-1.5 px-4">
+                                            <i class="fa-regular fa-thumbs-down mr-3"></i>
+                                            <span>Tidak Suka</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-600 py-1.5 px-4">
+                                            <i class="fa-regular fa-flag mr-3 text-red-500"></i>
+                                            <span class="text-red-500">Report</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-slate-900 text-sm leading-normal mb-4 font-bold">Ter NTR</p>
+                          <div>
+                            <img src="image/meme-2.jpg" alt="" class="w-full">
+                          </div>
+                        </div>
+                        <div class="mt-3">
+                            <a href="#">
+                                <span class="text-base bg-sky-500 px-3 py-1 rounded-lg text-white font-semibold">
+                                    # Sad
+                                </span>
+                            </a>
+                            <a href="#" class="ml-3">
+                                <span class="text-base bg-yellow-500 px-3 py-1 rounded-lg text-white font-semibold">
+                                    # Sawer
+                                </span>
+                            </a>
+                            <a href="#" class="ml-3">
+                                <span class="text-base bg-green-500 px-3 py-1 rounded-lg text-white font-semibold">
+                                    # Relate
+                                </span>
+                            </a>
+                        </div>
+                        <div
+                            class="-ml-4 -mr-4 border-t border-b border-gray-100 pt-1 px-4 flex items-center flex-wrap mt-2">
+                            <a href="#"
+                                class="flex items-center p-2 rounded-md hover:bg-gray-100 font-semibold text-gray-500 text-[13px] hover:text-gray-800 mr-auto mb-1">
+                                <i class="fa-regular fa-comment"></i>
+                                <span class="ml-3">5 Komen</span>
+                            </a>
+                            <div class="flex items-center mb-1">
+                                <a href="#"
+                                    class="flex items-center p-2 rounded-md hover:bg-gray-100 font-semibold text-gray-500 text-[13px] hover:text-gray-800 mr-2">
+                                    <i class="ri-thumb-up-line mr-2"></i>
+                                    <span>27 Suka</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center p-2 rounded-md hover:bg-gray-100 font-semibold text-gray-500 text-[13px] hover:text-gray-800">
+                                    <i class="ri-share-line mr-2"></i>
+                                    <span>10 Bagikan</span>
+                                </a>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                        <div class="max-h-64 overflow-y-auto pt-2 -ml-4 -mr-4 px-4">
+                            <div class="py-2">
+                                <div class="flex items-center justify-between mb-1">
+                                    <div class="flex items-center">
+                                        <img src="image/my-profil.png" alt=""
+                                            class="w-9 h-9 object-cover rounded-md mr-3">
+                                        <div>
+                                            <a href="#" class="font-semibold text-sm">itsmyal07</a>
+                                            <div class="text-gray-400 text-[12px]">3 jam</div>
+                                        </div>
+                                    </div>
+                                    <a href="#"
+                                        class="text-[12px] font-semibold text-gray-400 hover:text-blue-500">Reply</a>
+                                </div>
+                                <p class="text-sm leading-normal text-gray-500">Awokaowkaowk Sabar</p>
+                            </div>
+                            <div class="py-2">
+                                <div class="flex items-center justify-between mb-1">
+                                    <div class="flex items-center">
+                                        <img src="image/pecinta-loli.png" alt=""
+                                            class="w-9 h-9 object-cover rounded-md mr-3">
+                                        <div>
+                                            <a href="#" class="font-semibold text-sm">Mr.Jendoks</a>
+                                            <div class="text-gray-400 text-[12px]">1 jam</div>
+                                        </div>
+                                    </div>
+                                    <a href="#"
+                                        class="text-[12px] font-semibold text-gray-400 hover:text-blue-500">Reply</a>
+                                </div>
+                                <p class="text-sm leading-normal text-gray-500">Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Quisquam, sunt!</p>
+                            </div>
+                            <div class="py-2">
+                                <div class="flex items-center justify-between mb-1">
+                                    <div class="flex items-center">
+                                        <img src="image/darg-meme.png" alt=""
+                                            class="w-9 h-9 object-cover rounded-md mr-3">
+                                        <div>
+                                            <a href="#" class="font-semibold text-sm">Nanang_Buntung</a>
+                                            <div class="text-gray-400 text-[12px]">28 menit</div>
+                                        </div>
+                                    </div>
+                                    <a href="#"
+                                        class="text-[12px] font-semibold text-gray-400 hover:text-blue-500">Reply</a>
+                                </div>
+                                <p class="text-sm leading-normal text-gray-500">hahahahah</p>
+                            </div>
+                            <div class="flex items-center pt-2 pb-1 bg-white sticky bottom-0 left-0">
+                                <img src="image/my-profil.png" alt=""
+                                    class="w-8 h-8 object-cover rounded-md mr-3">
+                                <form action="" class="relative w-full">
+                                    <input type="text"
+                                        class="py-2 px-4 pr-10 text-sm rounded-md focus:outline-blue-500 bg-gray-100 w-full"
+                                        placeholder="Search...">
+                                    <button type="submit"
+                                        class="absolute top-1/2 -translate-y-1/2 right-4 text-blue-500 font-semibold">
+                                        <i class="ri-send-plane-2-line"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-md shadow-md shadow-black/5 bg-white mb-4">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center mr-4">
+                                <img src="image/pecinta-loli.png" alt=""
+                                    class="w-9 h-9 object-cover rounded-md mr-3">
+                                <div>
+                                    <a href="#" class="font-semibold text-sm">Mr.Jendonks</a>
+                                    <div class="text-gray-400 text-[12px]">1 hari</div>
+                                </div>
+                            </div>
+                            <div class="dropdown group">
+                                <button type="button"
+                                    class="dropdown-toggle flex items-center justify-center w-5 h-5 text-sm rounded bg-gray-100 text-gray-400 group-[.active]:text-gray-500">
+                                    <i class="ri-more-fill"></i>
+                                </button>
+                                <ul
+                                    class="dropdown-menu z-20 py-2 rounded-md shadow-md shadow-black/5 border border-gray-100 min-w-[140px] hidden group-[.active]:block bg-white">
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-600 py-1.5 px-4">
+                                            <i class="fa-regular fa-floppy-disk mr-3"></i>
+                                            <span>Simpan</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-600 py-1.5 px-4">
+                                            <i class="fa-solid fa-download mr-3"></i>
+                                            <span>Dowload</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-600 py-1.5 px-4">
+                                            <i class="fa-regular fa-thumbs-down mr-3"></i>
+                                            <span>Tidak Suka</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-600 py-1.5 px-4">
+                                            <i class="fa-regular fa-flag mr-3 text-red-500"></i>
+                                            <span class="text-red-500">Report</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <p class="text-slate-800 text-sm leading-normal mb-4 font-semibold">Moment Ketika</p>
+                          <div>
+                            <img src="image/meme-1.jpg" alt="" class="w-full">
+                          </div>
+                        </div>
+                        <div class="mt-3">
+                            <a href="#">
+                                <span class="text-base bg-sky-500 px-3 py-1 rounded-lg text-white font-semibold">
+                                    # Sad
+                                </span>
+                            </a>
+                            <a href="#" class="ml-3">
+                                <span class="text-base bg-yellow-500 px-3 py-1 rounded-lg text-white font-semibold">
+                                    # Sawer
+                                </span>
+                            </a>
+                            <a href="#" class="ml-3">
+                                <span class="text-base bg-green-500 px-3 py-1 rounded-lg text-white font-semibold">
+                                    # Relate
+                                </span>
+                            </a>
+                        </div>
+                        <div
+                            class="-ml-4 -mr-4 border-t border-b border-gray-100 pt-1 px-4 flex items-center flex-wrap mt-2">
+                            <a href="#"
+                                class="flex items-center p-2 rounded-md hover:bg-gray-100 font-semibold text-gray-500 text-[13px] hover:text-gray-800 mr-auto mb-1">
+                                <i class="fa-regular fa-comment"></i>
+                                <span class="ml-3">5 Komen</span>
+                            </a>
+                            <div class="flex items-center mb-1">
+                                <a href="#"
+                                    class="flex items-center p-2 rounded-md hover:bg-gray-100 font-semibold text-gray-500 text-[13px] hover:text-gray-800 mr-2">
+                                    <i class="ri-thumb-up-line mr-2"></i>
+                                    <span>27 Suka</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center p-2 rounded-md hover:bg-gray-100 font-semibold text-gray-500 text-[13px] hover:text-gray-800">
+                                    <i class="ri-share-line mr-2"></i>
+                                    <span>10 Bagikan</span>
+                                </a>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                        <div class="max-h-64 overflow-y-auto pt-2 -ml-4 -mr-4 px-4">
+                            <div class="flex items-center pt-2 pb-1 bg-white sticky bottom-0 left-0">
+                                <img src="image/my-profil.png" alt=""
+                                    class="w-8 h-8 object-cover rounded-md mr-3">
+                                <form action="" class="relative w-full">
+                                    <input type="text"
+                                        class="py-2 px-4 pr-10 text-sm rounded-md focus:outline-blue-500 bg-gray-100 w-full"
+                                        placeholder="Search...">
+                                    <button type="submit"
+                                        class="absolute top-1/2 -translate-y-1/2 right-4 text-blue-500 font-semibold">
+                                        <i class="ri-send-plane-2-line"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex-shrink justify-center hidden sm:hidden md:hidden lg:block fixed right-0 z-10 top-[49px]">
+                    <div class="w-64 max-h-screen overflow-y-auto bg-white pl-4  ml-4 scrollable-container pb-24">
+                        <!-- Repeatable Content -->
+                        <div class="space-y-4">
+                            <!-- Content Block -->
+
+                            <div class="flex items-center space-x-4">
+                                <a href="#" class="flex items-center space-x-4">
+                                    <img src="image/pecinta-loli.png" alt="Deskripsi gambar" class="w-24 h-24 object-cover">
+                                    <div>
+                                        <h3 class="text-lg font-semibold">WTF team</h3>
+                                        <span class="text-sm text-gray-600">0 Member</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <hr class="border-t border-slate-500">
+                            <div class="flex items-center space-x-4">
+                                <a href="#" class="flex items-center space-x-4">
+                                    <img src="image/pecinta-loli.png" alt="Deskripsi gambar" class="w-24 h-24 object-cover">
+                                    <div>
+                                        <h3 class="text-lg font-semibold">WTF team</h3>
+                                        <span class="text-sm text-gray-600">0 Member</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <hr class="border-t border-slate-500">
+                            <div class="flex items-center space-x-4">
+                                <a href="#" class="flex items-center space-x-4">
+                                    <img src="image/pecinta-loli.png" alt="Deskripsi gambar" class="w-24 h-24 object-cover">
+                                    <div>
+                                        <h3 class="text-lg font-semibold">WTF team</h3>
+                                        <span class="text-sm text-gray-600">0 Member</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <hr class="border-t border-slate-500">
+                            <div class="flex items-center space-x-4">
+                                <a href="#" class="flex items-center space-x-4">
+                                    <img src="image/pecinta-loli.png" alt="Deskripsi gambar" class="w-24 h-24 object-cover">
+                                    <div>
+                                        <h3 class="text-lg font-semibold">WTF team</h3>
+                                        <span class="text-sm text-gray-600">0 Member</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <hr class="border-t border-slate-500">
+                            <div class="flex items-center space-x-4">
+                                <a href="#" class="flex items-center space-x-4">
+                                    <img src="image/pecinta-loli.png" alt="Deskripsi gambar" class="w-24 h-24 object-cover">
+                                    <div>
+                                        <h3 class="text-lg font-semibold">WTF team</h3>
+                                        <span class="text-sm text-gray-600">0 Member</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <hr class="border-t border-slate-500">
+                            <div class="flex items-center space-x-4">
+                                <a href="#" class="flex items-center space-x-4">
+                                    <img src="image/pecinta-loli.png" alt="Deskripsi gambar" class="w-24 h-24 object-cover">
+                                    <div>
+                                        <h3 class="text-lg font-semibold">WTF team</h3>
+                                        <span class="text-sm text-gray-600">0 Member</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <hr class="border-t border-slate-500">
+                            <div class="flex items-center space-x-4">
+                                <a href="#" class="flex items-center space-x-4">
+                                    <img src="image/pecinta-loli.png" alt="Deskripsi gambar" class="w-24 h-24 object-cover">
+                                    <div>
+                                        <h3 class="text-lg font-semibold">WTF team</h3>
+                                        <span class="text-sm text-gray-600">0 Member</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <hr class="border-t border-slate-500">
+                            <div class="flex items-center space-x-4">
+                                <a href="#" class="flex items-center space-x-4">
+                                    <img src="image/pecinta-loli.png" alt="Deskripsi gambar" class="w-24 h-24 object-cover">
+                                    <div>
+                                        <h3 class="text-lg font-semibold">WTF team</h3>
+                                        <span class="text-sm text-gray-600">0 Member</span>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- topik -->
+                  
+                </div>
+            <!-- end: Content -->
+        </div>
+    </main>
+    
+    <!-- end: Main -->
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="dist/js/script.js"></script>
+</body>
+
+</html>
